@@ -27,7 +27,7 @@
                 <!-- <input type="email" placeholder="Email" id="regMail"> -->
 
                 <div class="input-control">
-                    
+
                     <input type="email" placeholder="E-mail" id="regMail">
                     <div class="error"></div>
                 </div>
@@ -35,8 +35,8 @@
 
                 <!-- <input type="password" placeholder="Password" id="regPass"> -->
 
-                <div class="input-control">
-                    
+                <div class="input-control ">
+
                     <input type="password" placeholder="Password" id="regPass">
                     <span class="password-toggle-icon"><i class="fas fa-eye"></i></span>
 
@@ -44,8 +44,8 @@
                 </div>
 
                 <!--password2-->
-                <div class="input-control">
-                    
+                <div class="input-control ">
+
                     <input type="password" placeholder="Repeat Password" id="regPass2">
                     <span class="password-toggle-icon2"><i class="fas fa-eye"></i></span>
                     <div class="error"></div>
@@ -55,11 +55,15 @@
             </form>
         </div>
         <div class="form-container sign-in"><!--sign in container-->
-            <form>
+            <form id="inForm">
                 <h1>Sign in</h1>
                 <span>Use your e-mail and password for sign in</span>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
+                <input type="email" placeholder="Email" id="inMail">
+                <input type="password" placeholder="Password" id="inPass">
+                <span class="password-toggle-icon3"><i class="fas fa-eye" ></i></span>
+                <div class="badSignClass">
+                    <h1 id="badSign">Incorrect e-mail or Password</h1>
+                </div>
                 <button>Sign In </button>
             </form>
         </div>
@@ -86,6 +90,16 @@
             <span class="close-button">&times;</span>
             <h2>Success!</h2>
             <p>Your registration has been submitted successfully.</p>
+            <p>Please use data from your newly created account to log in.</p>
+        </div>
+    </div>
+
+
+    <div id="logModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Log In Success!</h2>
+            <h5>Redirecting...</h5>
         </div>
     </div>
     <script src="LOG_REG_script.js"></script>
