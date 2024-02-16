@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>PTO Management System</title>
+    <link href="\PTOmanager\images\favicon.ico" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="pto_manager_styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>PTO Management System</h1>
+        <div class="search_logout">
+            <div class="search-box">
+                <i class="fa-solid fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Search employee...">
+            </div>
+            <button id="logoutBtn">Logout</button>
+        </div>
+
+
+
+    </header>
+
+    <main>
+        <div class="helloMessage">
+            <h5>Hello David, welcome back</h5>
+        </div>
+        <h2>Add Employee PTO</h2>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate">
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate">
+        <button onclick="addPTO()">Add PTO</button>
+    </main>
+
+    <section id="ptoList">
+        <!-- Display added PTO here -->
+    </section>
+
+    <div id="logoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="logotuBtns">
+                <h2>Do you really want to log out?</h2>
+                <button id="yesLogOut"> Yes</button>
+                <button id="noLogOut">No</button>
+            </div>
+            <!-- <div class="outText">
+                <h2>Log out Success!</h2>
+                <h5>Redirecting...</h5>
+            </div> -->
+        </div>
+    </div>
+
+
+    <div id="farewell" class="modal2">
+        <div class="modal-content2">
+            <span class="close-button">&times;</span>
+                <h2>Log out Success!</h2>
+                <h5>Redirecting...</h5>
+            </div>
+        </div>
+    </div>
+
+    <script src="pto_manager_script.js"></script>
+</body>
+
+</html>
