@@ -40,8 +40,6 @@ body {
   font-size: 12px;
 }
 
-/*css2*/
-
 .container button {
   background-color: #512da8;
   color: #fff;
@@ -72,9 +70,9 @@ body {
 }
 
 .input-control {
-    width: 100%;
+  width: 100%;
 }
-.container input  {
+.container input {
   background-color: #eee;
   border: none;
   margin: 8px 0;
@@ -99,13 +97,11 @@ body {
   z-index: 2;
 }
 
-/*css3*/
 
 /* Styles applied to the sign-in panel when the container is active */
 .container.active .sign-in {
   transform: translateX(100%);
 }
-
 
 /* Styles for the sign-up panel */
 .sign-up {
@@ -114,7 +110,6 @@ body {
   opacity: 0;
   z-index: 1;
 }
-
 
 /* Styles applied to the sign-up panel when the container is active */
 .container.active .sign-up {
@@ -126,20 +121,19 @@ body {
 
 /* Keyframes for the 'move' animation */
 @keyframes move {
-    0%, /* Start of the animation */
-    49.99% { /* Transition midpoint */
-      opacity: 0; /* Set opacity to 0 to hide the panel */
-      z-index: 1; /* Set the stacking order to 1 to hide the panel behind other elements */
-    }
-    50%, /* Transition midpoint */
-    100% { /* End of the animation */
-      opacity: 1; /* Set opacity to 1 to make the panel visible */
-      z-index: 5; /* Set the stacking order to 5 to ensure the panel remains above other elements */
-    }
+  0%, /* Start of the animation */
+    49.99% {
+    /* Transition midpoint */
+    opacity: 0; /* Set opacity to 0 to hide the panel */
+    z-index: 1; /* Set the stacking order to 1 to hide the panel behind other elements */
   }
-
-/*css4*/
-
+  50%, /* Transition midpoint */
+    100% {
+    /* End of the animation */
+    opacity: 1; /* Set opacity to 1 to make the panel visible */
+    z-index: 5; /* Set the stacking order to 5 to ensure the panel remains above other elements */
+  }
+}
 
 /* Styles for the container of the toggle button */
 .toggle-container {
@@ -154,14 +148,13 @@ body {
   z-index: 1000;
 }
 
-
 /* Styles applied to the toggle container when the main container is active */
 .container.active .toggle-container {
-  transform: translateX(-100%);/* Move the container to the left by its own width to hide it */
-  border-radius: 0 150px 100px 0;/* Adjust the border radius to match the animation */
+  transform: translateX(
+    -100%
+  ); /* Move the container to the left by its own width to hide it */
+  border-radius: 0 150px 100px 0; /* Adjust the border radius to match the animation */
 }
-
-
 
 /* Styles for the toggle button */
 .toggle {
@@ -171,18 +164,17 @@ body {
   color: #fff;
   position: relative;
   left: -100%; /* Initially move the button out of view to the left */
-  width: 200%;/* Set width to twice the container's width for animation */
-  transform: translateX(0);/* Reset any translation initially */
-  transition: all 0.6s ease-in-out;/* Apply a transition effect to all properties with a duration of 0.6 seconds */
+  width: 200%; /* Set width to twice the container's width for animation */
+  transform: translateX(0); /* Reset any translation initially */
+  transition: all 0.6s ease-in-out; /* Apply a transition effect to all properties with a duration of 0.6 seconds */
 }
 
 /* Styles applied to the toggle button when the main container is active */
 .container.active .toggle {
-  transform: translateX(50%);/* Move the button halfway into view to the right */
+  transform: translateX(
+    50%
+  ); /* Move the button halfway into view to the right */
 }
-
-/*css5*/
-
 
 /* Styles for the toggle panel */
 .toggle-panel {
@@ -196,7 +188,7 @@ body {
   padding: 0 30px;
   text-align: center;
   top: 0;
-  transform: translateX(0);/* Reset any translation initially */
+  transform: translateX(0); /* Reset any translation initially */
   transition: all 0.6s ease-in-out;
 }
 
@@ -207,28 +199,24 @@ body {
 
 /* Styles applied to the left toggle panel when the main container is active */
 .container.active .toggle-left {
-  transform: translateX(0);/* Move the panel into view from the left */
+  transform: translateX(0); /* Move the panel into view from the left */
 }
-
 
 /* Styles for the toggle panel when shifted to the right */
 .toggle-right {
   right: 0; /* Align the panel to the right edge of its parent */
-  transform: translateX(0);/* Reset any translation initially */
+  transform: translateX(0); /* Reset any translation initially */
 }
-
 
 /* Styles applied to the right toggle panel when the main container is active */
 .container.active .toggle-right {
-  transform: translateX(200%);/* Move the panel out of view to the right */
+  transform: translateX(200%); /* Move the panel out of view to the right */
 }
 
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ANOTHER CSS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~1*/
+/*modals css start*/
 
-/*modal*/
-
-.modal{
+.modal {
   display: none;
   position: fixed;
   z-index: 15000;
@@ -240,74 +228,136 @@ body {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.modal-content{
+.modal-content {
   position: relative;
-  background-color: #fefefe;
+  background: linear-gradient(to right, #8fa0ff, #6624ff);
   margin: 15% auto;
   padding: 20px;
   width: 80%;
   border: 1px solid #888;
-  max-width: 500px;
+  max-width: 550px;
   border-radius: 10px;
   text-align: center;
   z-index: 15000;
+  color: #fff;
 }
 
-.close-button{
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  color: #aaa;
-  /* float: right; */
-  font-size: 28px;
-  font-weight: bold;
-  transition: all 0.3s ease;
+.close-button {
+  display: none;
 }
-
-.close-button:hover,
-.close-button:focus{
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
+/*modals css end*/
 
 
-
-/*not preety*/
-/* .input-control.success input {
-  border-color: #09c372;
-} */
-
-
- .input-control.error input {
+/* Error styling for form errors */
+.input-control.error input {
   border-color: #ff3860;
 }
- .input-control.error {
-  color:  #ff3860;
+.input-control.error {
+  color: #ff3860;
   font-size: 10px;
   font-weight: bold;
-}  
-
-
-
+}
 
 .input-control {
   position: relative;
 }
 
 .input-control input {
-  padding-right: 30px; /* Space for the eye icon */
+  padding-right: 30px; 
 }
 
-.password-toggle-icon, .password-toggle-icon2  {
+/* Eye icon styling for toggle password */
+.password-toggle-icon,
+.password-toggle-icon2,
+.password-toggle-icon3 {
   position: absolute;
-  top: 50%;
+  top: 25px;
   right: 5px;
   transform: translateY(-50%);
   cursor: pointer;
 }
 
+#inPass {
+  position: relative;
+}
+
+.password-toggle-icon3 {
+  position: absolute;
+  top: 56%;
+  right: 45px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
 /* Style the eye icon */
-.password-toggle-icon i, .password-toggle-icon2 i {
+.password-toggle-icon i,
+.password-toggle-icon2 i,
+.password-toggle-icon3 i {
   color: #777;
 }
+
+/*H1 FROM BADSIGN*/
+
+#badSign {
+  text-align: center;
+  color: red;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.badSignClass {
+  display: none;
+  width: 100%;
+  padding: 10px 2px;
+  margin: 5px 2px;
+  background-color: #ffcccc; 
+  border-radius: 10px; 
+  border: 2px solid #ff6666; 
+}
+
+
+/* media queeries css start */
+
+@media screen and (max-width: 450px) {
+  #regPass2 {
+    font-size: 9.4px;
+  }
+
+  .container button {
+    font-size: 7px;
+  }
+
+  .password-toggle-icon3 {
+    top: 58%;
+    right: 40px;
+  }
+
+  .toggle-container {
+    border-radius: 80px 0 0 80px;
+  }
+  .container.active .toggle-container {
+    border-radius: 0 80px 80px 0;
+  }
+
+  .input-control.error {
+    font-size: 9px;
+  }
+
+  .container input {
+    background-color: #eee;
+    border: none;
+    margin: 8px 0;
+    padding: 10px 15px;
+    font-size: 10px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+  }
+
+  
+
+  .modal-content {
+    top: 35%;
+  }
+}
+/* media queeries css end */
